@@ -36,7 +36,7 @@
 }
 
 /* I've created an individual item tag for each of the seperate grid squares. For example, item-one has a border on the left and top as assigned in grid-item, but I have used (location)-border: none; to get rid of the borders that create the image I'm trying to create in my reference image. */
-/* I have also created a gradient that flows with the grid, I started by using */
+/* I have also created a gradient that flows with the grid, I started by using specific degrees to make the gradient flow, but decided that pointing them in specific directions like bottom-right would be more accurate. I created a pink colour for the gradient to fade to from --colour-three. */
 #item-one{
     background-image: linear-gradient(to bottom right,rgb(244, 111, 215), var(--colour-three));
     border-bottom: none;
@@ -50,6 +50,7 @@
     border-right: none;
 }
 
+/* In this item I am creating a grid square that is curved on one side. I am doing this by using border-radius to create a a curved edge on one side of the grid box. The sides start from top left and go clockwise to bottom left, so the second value changed the top right corner into a curve. */
 #item-three{
     background-image: linear-gradient(to bottom left,rgb(244, 111, 215), var(--colour-three));
     border-radius: 0px 38px 0px 0px;
@@ -78,6 +79,7 @@
     border-right: none;
 }
 
+/* In this item I have created a white background using background-color and have overrided the border so there are no borders using border: none; (this says there should be no borders on any side. */
 #item-seven{
     background-color: white;
     border: none;
