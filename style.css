@@ -1,0 +1,270 @@
+
+/* I created a margin around my box of 3px just so the box doesn't touch the edge of the screen. I also created a borderbox. */
+*{
+    margin: 3px;
+    box-sizing: content-box;
+}
+
+/* This is creating colours that I can refer back to with a var() tag. I have created 4 greyscale colours and a simple border for my design. */
+:root{
+    --colour-one: rgb(0,0,0);
+    --colour-two: rgb(80,80,80);
+    --colour-three: rgb(160,160,160);
+    --colour-four: rgb(240,240,240);
+    --border-one: solid 1mm black;
+}
+
+/* Established a 7x5 grid with a white background. I adjusted the width so the grids would be squares. There is no margin on the grids, but there is a 3px gap between them. */
+#bg-grid-container{
+    background-color: white;
+    position: sticky;
+    width: 492px;
+    height: 690px;
+    /* height: 100vh;
+    min-height: 690px; */ /* commenting this out for right now so I can figure it out later */
+    margin: auto;
+    margin-bottom: 1mm;
+    display: grid;
+    gap: 3px 3px; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+}
+
+/* I have set up this grid-item so that all my 'items' in my html file that say class="grid-item" will have '--border-one's attributes (a solid, 1mm thick black border) */
+.grid-item{
+    border:var(--border-one);
+}
+
+/* I've created an individual item tag for each of the seperate grid squares. For example, item-one has a border on the left and top as assigned in grid-item, but I have used (location)-border: none; to get rid of the borders that create the image I'm trying to create in my reference image. */
+/* I have also created a gradient that flows with the grid, I started by using */
+#item-one{
+    background-image: linear-gradient(to bottom right,rgb(244, 111, 215), var(--colour-three));
+    border-bottom: none;
+    border-right: none;
+}
+
+#item-two{
+    background-image: linear-gradient(to bottom,rgb(244, 111, 215), var(--colour-three));
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+#item-three{
+    background-image: linear-gradient(to bottom left,rgb(244, 111, 215), var(--colour-three));
+    border-radius: 0px 38px 0px 0px;
+    border-bottom: none;
+    border-left: none;
+}
+
+#item-four{
+    background-image: linear-gradient(to bottom left,rgb(244, 111, 215), var(--colour-three));
+    border-radius: 38px 0px 0px 0px;
+    border-bottom: none;
+    border-right: none;
+}
+
+#item-five{
+    background-image: linear-gradient(to bottom right,rgb(244, 111, 215), var(--colour-three));
+    border-radius: 0px 38px 0px 0px;
+    border-bottom: none;
+    border-left: none;
+}
+
+#item-six{
+    background-image: linear-gradient(to right,rgb(244, 111, 215), var(--colour-three));
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+}
+
+#item-seven{
+    background-color: white;
+    border: none;
+}
+
+#item-eight{
+    background-image: linear-gradient(to left,rgb(244, 111, 215), var(--colour-three));
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+}
+
+#item-nine{
+    background-image: linear-gradient(to left,rgb(244, 111, 215), var(--colour-three));
+    border-top: none;
+    border-bottom: none;
+}
+
+#item-ten{
+    background-image: linear-gradient(to right,rgb(244, 111, 215), var(--colour-three));
+    border-top: none;
+    border-bottom: none;
+}
+
+#item-eleven{
+    background-image: linear-gradient(to right,rgb(244, 111, 215), var(--colour-three));
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+}
+
+#item-twelve{
+    background-color: var(--colour-three);
+    border: none;
+}
+
+#item-thirteen{
+    background-image: linear-gradient(70deg, var(--colour-three), rgb(244, 111, 215));
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+} 
+
+#item-fourteen{
+    background-image: linear-gradient(to left,rgb(244, 111, 215), var(--colour-three));
+    border-top: none;
+    border-bottom: none;
+}
+
+#item-fifteen{
+    background-image: linear-gradient(to right,rgb(244, 111, 215), var(--colour-three));
+    border-top: none;
+    border-bottom: none;
+}
+
+#item-sixteen{
+    background-image: linear-gradient(to top right,rgb(244, 111, 215), var(--colour-three));
+    border-radius: 0px 0px 0px 38px;
+    border-top: none;
+    border-right: none;
+}
+
+#item-seventeen{
+    background-image: linear-gradient(to top,rgb(244, 111, 215), var(--colour-three));
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+#item-eighteen{
+    background-image: linear-gradient(-8deg,rgb(244, 111, 215), var(--colour-three));
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+#item-nineteen{
+    background-image: linear-gradient(to top left,rgb(244, 111, 215), var(--colour-three));
+    border-radius: 0px 0px 38px 0px;
+    border-top: none;
+    border-left: none;
+}
+
+#item-twenty{
+    background-image: linear-gradient(to top right,rgb(244, 111, 215), var(--colour-three));
+    border-top: none;
+    border-bottom: none;
+}
+
+#item-twentyone{
+    background-image: linear-gradient(to bottom right,rgb(244, 111, 215), var(--colour-three));
+    border-radius: 38px 0px 0px 0px;
+    border-bottom: none;
+    border-right: none;
+}
+
+#item-twentytwo{
+    background-image: linear-gradient(to bottom left,rgb(244, 111, 215), var(--colour-three));
+    border-radius: 0px 38px 0px 0px;
+    border-bottom: none;
+    border-left: none;
+}
+
+#item-twentythree{
+    background-image: linear-gradient(to bottom right,rgb(244, 111, 215), var(--colour-three));
+    border-radius: 38px 0px 0px 0px;
+    border-bottom: none;
+    border-right: none;
+}
+
+#item-twentyfour{
+    background-image: linear-gradient(to bottom,rgb(244, 111, 215), var(--colour-three));
+    border-left: none;
+    border-right: none;
+}
+
+#item-twentyfive{
+    background-image: linear-gradient(to bottom left,rgb(244, 111, 215), var(--colour-three));
+    border-radius: 0px 0px 38px 0px;
+    border-top: none;
+    border-left: none;
+
+}
+
+#item-twentysix{
+    background-image: linear-gradient(to right,rgb(244, 111, 215), var(--colour-three));
+    border-top: none;
+    border-bottom: none;
+}
+
+#item-twentyseven{
+    background-image: linear-gradient(to top left,rgb(244, 111, 215), var(--colour-three));
+    border-radius: 0px 0px 0px 38px;
+    border-top: none;
+    border-right: none;
+}
+
+#item-twentyeight{
+    background-image: linear-gradient(to top right,rgb(244, 111, 215), var(--colour-three));
+    border-radius: 0px 0px 38px 0px;
+    border-top: none;
+    border-left: none;
+}
+
+#item-twentynine{
+    background-image: linear-gradient(to bottom left,rgb(244, 111, 215), var(--colour-three));
+    border-radius: 38px 0px 0px 0px;
+    border-bottom: none;
+    border-right: none;
+}
+
+#item-thirty{
+    background-image: linear-gradient(to bottom right,rgb(244, 111, 215), var(--colour-three));
+    border-radius: 0px 38px 0px 0px;
+    border-bottom: none;
+    border-left: none;
+}
+
+#item-thirtyone{
+    background-image: linear-gradient(to top right,rgb(244, 111, 215), var(--colour-three));
+    border-radius: 0px 0px 0px 38px;
+    border-top: none;
+    border-right: none;
+}
+
+#item-thirtytwo{
+    background-image: linear-gradient(to top,rgb(244, 111, 215), var(--colour-three));
+    border-left: none;
+    border-right: none;
+}
+
+#item-thirtythree{
+    background-image: linear-gradient(to top, rgb(244, 111, 215), var(--colour-three));
+    border-left: none;
+    border-right: none;
+}
+
+#item-thirtyfour{
+    background-image: linear-gradient(to top left, rgb(244, 111, 215), var(--colour-three));
+    border-radius: 0px 0px 38px 0px;
+    border-top: none;
+    border-left: none;
+}
+
+#item-thirtyfive{
+    background-image: linear-gradient(to top right, rgb(244, 111, 215), var(--colour-three));
+    border-radius: 0px 0px 0px 38px;
+    border-top: none;
+    border-right: none;
+}
