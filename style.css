@@ -36,7 +36,7 @@
 }
 
 /* I've created an individual item tag for each of the seperate grid squares. For example, item-one has a border on the left and top as assigned in grid-item, but I have used (location)-border: none; to get rid of the borders that create the image I'm trying to create in my reference image. */
-/* I have also created a gradient that flows with the grid, I started by using specific degrees to make the gradient flow, but decided that pointing them in specific directions like bottom-right would be more accurate. I created a pink colour for the gradient to fade to from --colour-three. */
+/* I have also created a gradient that flows with the grid, I started by using specific degrees to make the gradient flow, but decided that pointing them in specific directions like bottom-right would be more accurate. I created a pink colour for the gradient to fade to from --colour-three. I had help from https://www.w3schools.com/css/css3_gradients.asp */
 #item-one{
     background-image: linear-gradient(to bottom right,rgb(244, 111, 215), var(--colour-three));
     border-bottom: none;
@@ -110,6 +110,7 @@
     border-bottom: none;
     border-right: none;
 }
+
 
 #item-twelve{
     background-color: var(--colour-three);
